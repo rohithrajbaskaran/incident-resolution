@@ -2,3 +2,5 @@ flask
 python-dotenv
 psycopg2-binary
 sentence_transformers
+flask_cors
+pgvector
