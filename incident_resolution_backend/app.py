@@ -266,30 +266,6 @@ def search_problem():
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
-@app.route("/search-v2", methods=["POST"])
-def search_problem_v2():
-    """Alternative search endpoint using v2 method"""
-    if connection is None:
-        return jsonify({"error": "DB connection not available"}), 500
-
-    data = request.get_json(force=True, silent=True)
-    if not data or not data.get("query"):
-        return jsonify({"error": "Query text required"}), 400
-
-    query_text = data["query"]
-    try:
-        with connection.cursor() as cursor:
-            matches = find_similar_problems_v2(cursor, query_text, similarity_threshold=0.65, top_k=5)
-            return jsonify({
-                "query": query_text,
-                "matches": matches,
-                "method": "v2"
-            }), 200
-    except Exception as e:
-        print("❌ Search v2 error:", e)
-        traceback.print_exc()
-        return jsonify({"error": str(e)}), 500
-
 # ------------------ Debug Route ------------------
 @app.route("/debug-vector", methods=["POST"])
 def debug_vector():
