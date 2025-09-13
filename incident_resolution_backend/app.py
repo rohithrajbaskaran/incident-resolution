@@ -256,6 +256,7 @@ def search_problem():
             # Get the best match as solution
             best_solution = matches[0]["solution"] if matches else None
             return jsonify({
+                "description": matches[0]["matched_text"] if matches else None,
                 "query": query_text,
                 "solution": best_solution,
                 "matches": matches
