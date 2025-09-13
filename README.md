@@ -4,14 +4,14 @@ An intelligent incident resolution system that uses AI-powered semantic search t
 
 ## ✨ Features
 
-- **📂 Excel File Upload**: Upload incident data from Excel files with automatic column detection
+- **📂 Excel File Upload**: Upload incident data from Excel files from ServiceNow with automatic column detection
 - **🔍 Intelligent Search**: Semantic search using sentence transformers to find similar problems
-- **🤖 AI-Powered Matching**: Uses vector embeddings to find the most similar historical incidents
+- **🤖 AI-Powered Matching**: Uses vector word embeddings to find the most similar historical incidents
 - **📊 Similarity Scoring**: Shows confidence scores for matched solutions
 - **🎨 Modern UI**: Clean, responsive interface built with React and Bootstrap
 - **⚡ Real-time Processing**: Fast search and upload processing
 
-## ��️ Architecture
+## 💡 Architecture
 
 The system consists of two main components:
 
@@ -29,7 +29,7 @@ The system consists of two main components:
 - **HTTP Client**: Axios for API communication
 - **UI Components**: Custom components with loading states and error handling
 
-## �� Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 
@@ -41,7 +41,7 @@ The system consists of two main components:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/rohithrajbaskaran/incident-resolution
 cd incident-resolution
 ```
 
@@ -102,7 +102,7 @@ CREATE EXTENSION IF NOT EXISTS vector;
 Create a `.env` file in the `incident_resolution_backend` directory:
 
 ```env
-# Database connection
+# Database connection (use your username and password)
 DATABASE_URL=postgresql://username:password@localhost:5432/incident_db
 
 # AI Model configuration
@@ -244,13 +244,6 @@ curl -X POST http://localhost:5000/debug-vector \
 3. Test vector operations with debug endpoint
 4. Check frontend console for API errors
 
-## 📈 Performance
-
-- **Embedding Model**: all-MiniLM-L6-v2 (384 dimensions)
-- **Similarity Threshold**: 0.5 (configurable)
-- **Top Results**: 5 (configurable)
-- **Vector Index**: Uses pgvector for fast similarity search
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -263,7 +256,7 @@ curl -X POST http://localhost:5000/debug-vector \
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## �� Acknowledgments
+## 🙏  Acknowledgments
 
 - [Sentence Transformers](https://www.sbert.net/) for text embeddings
 - [pgvector](https://github.com/pgvector/pgvector) for vector operations
@@ -271,7 +264,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [React](https://reactjs.org/) for the frontend framework
 - [Bootstrap](https://getbootstrap.com/) for UI components
 
-## �� Support
+## ✉️ Support
 
 For support and questions:
 
